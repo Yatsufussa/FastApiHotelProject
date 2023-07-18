@@ -12,3 +12,5 @@ from booked_rooms import booked_rooms_api
 
 # Start Fast Api
 # uvicorn main:app --reload
+# if __name__ == '__main__':
+#     app.run(debug=True)

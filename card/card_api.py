@@ -26,7 +26,7 @@ async def delete_user_card_api(card_id: int, user_id: int):
 
 
 # Проверка баланса карты
-@app.balance('/balance_user_card')
+@app.get('/balance_user_card')
 async def balance_user_card_api(card_number: int):
     result = get_exact_card_balance_db(card_number=card_number)
     return {"status": 1, "message": result}

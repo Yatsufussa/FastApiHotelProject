@@ -1,6 +1,7 @@
 from main import app
 from database import add_apartment_db, add_hotel_db
 
+
 @app.post('/add_hotel')
 async def add_hotel_api(hotel_name: str,
                         hotel_location: str,
@@ -36,4 +37,3 @@ async def add_apartment_api(hotel_id: str,
                               apartment_price=apartment_price,
                               status=status)
     return {"status": 1, "message": result}
-

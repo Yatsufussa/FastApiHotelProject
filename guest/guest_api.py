@@ -4,7 +4,7 @@ from database.guestservice import register_user_db, check_password_db, delete_us
 
 
 
-@app.post('/register_user')
+@app.post('/register_guests')
 async def register_user_api(user_phone_number: int, user_name: str, password: str, user_email: str):
     result = register_user_db(user_phone_number=user_phone_number, user_name=user_name, password=password,
                               user_email=user_email)
